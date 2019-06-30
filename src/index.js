@@ -1,7 +1,6 @@
 /** @module resolve-any */
 
 import {isFunction} from "lodash"
-import isPromise from "p-is-promise"
 
 /**
  * Returns given value. If `value` is a function, returns its return value. If `value` is a `Promise`, returns its resolved value.
