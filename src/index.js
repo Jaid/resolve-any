@@ -12,12 +12,15 @@ import {isFunction} from "lodash"
  * const result = resolveAny(() => "world")
  * result === "world"
  * @async
- * @param value
+ * @param {*} value
+ * @param {...*} args If value is a function, it will be called with these arguments
  * @returns {*} Resolved value
  */
-export default async value => {
-  const returnedValue = isFunction(value) ? value() : value
-  return returnedValue
+export default async (value, ...args) => {
+  if (isFunction(value)) {
+    return value(...args)
+  }
+  return value
 }
 
 /**
@@ -30,11 +33,12 @@ export default async value => {
  * const result = resolveSync(() => "world")
  * result === "world"
  * @param value
+ * @param {...*} args If value is a function, it will be called with these arguments
  * @returns {*} Resolved value
  */
-export const resolveSync = value => {
-  if (value |> isFunction) {
-    return value()
+export const resolveSync = (value, ...args) => {
+  if (isFunction(value)) {
+    return value(...args)
   }
   return value
 }
