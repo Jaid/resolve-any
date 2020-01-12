@@ -1,54 +1,64 @@
 # resolve-any
 
 
-Calls a value if it is a function, simply returns it otherwise.
+<a href="https://raw.githubusercontent.com/Jaid/resolve-any/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/resolve-any?style=flat-square" alt="License"/></a>  
+<a href="https://actions-badge.atrox.dev/Jaid/resolve-any/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fresolve-any%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/resolve-any/commits"><img src="https://img.shields.io/github/commits-since/Jaid/resolve-any/v2.0.0?style=flat-square&logo=github" alt="Commits since v2.0.0"/></a> <a href="https://github.com/Jaid/resolve-any/commits"><img src="https://img.shields.io/github/last-commit/Jaid/resolve-any?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/resolve-any/issues"><img src="https://img.shields.io/github/issues/Jaid/resolve-any?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/resolve-any"><img src="https://img.shields.io/npm/v/resolve-any?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/resolve-any/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/resolve-any?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/resolve-any"><img src="https://img.shields.io/npm/dm/resolve-any?style=flat-square&logo=npm" alt="Downloads"/></a>
+
+**Calls a value if it is a function, simply returns it otherwise.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Installation
-<a href='https://npmjs.com/package/resolve-any'><img alt='npm logo' src='https://raw.githubusercontent.com/npm/logos/master/npm%20logo/npm-logo-red.png' height=16/></a>
+<a href="https://npmjs.com/package/resolve-any"><img src="https://img.shields.io/badge/npm-resolve--any-C23039?style=flat-square&logo=npm" alt="resolve-any on npm"/></a>
 ```bash
-npm install --save resolve-any@^
+npm install --save resolve-any@^2.0.0
 ```
-<a href='https://yarnpkg.com/package/resolve-any'><img alt='Yarn logo' src='https://raw.githubusercontent.com/yarnpkg/assets/master/yarn-kitten-full.png' height=24/></a>
+<a href="https://yarnpkg.com/package/resolve-any"><img src="https://img.shields.io/badge/Yarn-resolve--any-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="resolve-any on Yarn"/></a>
 ```bash
-yarn add resolve-any@^
+yarn add resolve-any@^2.0.0
+```
+<a href="https://jsdelivr.com/package/npm/resolve-any/"><img src="https://img.shields.io/badge/jsDelivr-resolve--any-orange?style=flat-square&logo=html5&logoColor=white" alt="resolve-any on jsDelivr"/></a> <a href="https://unpkg.com/browse/resolve-any/"><img src="https://img.shields.io/badge/UNPKG-resolve--any-orange?style=flat-square&logo=html5&logoColor=white" alt="resolve-any on UNPKG"/></a>
+```html
+<script src="https://cdn.jsdelivr.net/npm/resolve-any@2.0.0/index.js"/>
 ```
 
 
-## Try it out
-Open a browser's JavaScript console and execute:
 
-```javascript
-const scriptElement = document.createElement("script");
-scriptElement.setAttribute("type","text/javascript");
-scriptElement.setAttribute("src","https://unpkg.com/resolve-any@2.0.0");
-document.querySelector("head").appendChild(scriptElement);
+
+
+
+
+
+## Development
+
+
+
+Setting up:
+```bash
+git clone git@github.com:Jaid/resolve-any.git
+cd resolve-any
+npm install
 ```
-
-The module is now loaded in a variable.
-
-```javascript
-typeof resolve-any.default
+Testing:
+```bash
+npm run test:dev
 ```
-
-## Documentation
-Returns given value. If `value` is a function, returns its return value.
-
-**Kind**: static constant of [<code>resolve-any</code>](#module_resolve-any)  
-**Returns**: <code>\*</code> - Resolved value  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| value |  |  |
-| ...args | <code>\*</code> | If value is a function, it will be called with these arguments |
-
-**Example**  
-```javascript
-import {resolveSync} from "resolve-any"
-const result = resolveSync("hello")
-result === "hello"
-import {resolveSync} from "resolve-any"
-const result = resolveSync(() => "world")
-result === "world"
+Testing in production environment:
+```bash
+npm run test
 ```
 
 
@@ -56,7 +66,7 @@ result === "world"
 ```text
 MIT License
 
-Copyright © 2019, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
+Copyright © 2020, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
