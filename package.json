@@ -32,5 +32,6 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "resolve-any",
-  "description": "Calls a value if it is a function, simply returns it otherwise."
+  "description": "Calls a value if it is a function, simply returns it otherwise.",
+  "funding": "https://github.com/sponsors/jaid"
 }
