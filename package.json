@@ -38,5 +38,15 @@
     "url": "https://github.com/jaid/resolve-any"
   },
   "homepage": "https://github.com/Jaid/resolve-any",
-  "keywords": []
+  "keywords": [
+    "function",
+    "lib",
+    "library",
+    "promise",
+    "resolve",
+    "resolve-any",
+    "string",
+    "util",
+    "utility"
+  ]
 }
